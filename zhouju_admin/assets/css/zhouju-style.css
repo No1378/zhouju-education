@@ -1,0 +1,42 @@
+.zhouju-navbar {
+	line-height: 70px;
+}
+.zhouju-logo {
+	padding-left:0;
+}
+.zhouju-nav>li {
+	height: 70px;
+	line-height: 70px;
+}
+.zhouju-user-info {
+	top: 20px;
+}
+.zhouju-nav>li.purple>a,.zhouju-nav>li.purple>a:hover,.zhouju-nav>li.light-blue>a,.zhouju-nav>li.open.purple>a {
+	background-color: transparent!important;
+}
+.zhouju-nav>li {
+	border-left:none;
+}
+body.navbar-fixed {
+	padding-top:70px;
+}
+
+/*列表*/
+.userinfo-ip {
+	color: #999;
+}
+.search-box-zhouju {
+	background-color: #ddd;
+	padding: 10px;
+	border-radius: 2px;
+}
+.list-result {
+	margin-top:10px;
+}
+
+.address-select select{
+	width: 30%;
+}
+.avatar-image {
+	height: 233px;
+}

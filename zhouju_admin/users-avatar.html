@@ -1,0 +1,117 @@
+<div class="modal-dialog modal-lg" role="document" style="width: 900px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改用户头像</h4>
+      </div>
+      <div class="modal-body">
+        
+		  <div class="row">
+		    <div class="col-sm-2 control-label">当前头像</div>
+		    <div class="col-sm-10">
+		      	<img src="http://www.zhoujuedu.com/assets/img/default/avatar.png" alt="" class="avatar-image" id="avatar-thumbnail">
+		    </div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-sm-2 control-label"></div>
+		  	<div class="col-sm-10">
+		  		<p class="help-block">请上传jpg, gif, png格式的图片，建议图片尺寸为 270×270px，建议图片大小不超过<strong>2MB</strong></p>
+		  	</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-sm-2 control-label"></div>
+		    <div class="col-sm-10">
+		      	<div class="webuploader-demo">
+		      		<div id="filePicker">请选择图片</div>
+		      	</div>
+		    </div>
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link" data-dismiss="modal">取消</button>
+  
+      </div>
+    </div>
+ </div>
+
+<link rel="stylesheet" href="assets/webuploader/webuploader.css">
+<link rel="stylesheet" href="assets/css/cropper.min.css">
+<script src="assets/webuploader/webuploader.min.js"></script>
+<script src="assets/js/cropper.js"></script>
+<script src="assets/js/jquery-cropper.js"></script>
+<script>
+
+	$('#chavModal').on('shown.bs.modal', function(){
+
+		if ($('.webuploader-element-invisible').length == 0) {
+
+			// 初始化Web Uploader
+			var uploader = WebUploader.create({
+
+			    // 选完文件后，是否自动上传。
+			    auto: false,
+
+			    // swf文件路径
+			    swf: 'assets/webuploader/Uploader.swf',
+
+			    // 文件接收服务端。
+			    //server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+			    // 选择文件的按钮。可选。
+			    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+			    pick: {
+			    	id: "#filePicker",
+			    	multiple: false
+			    },
+
+			    // 只允许选择图片文件。
+			    accept: {
+			        title: 'Images',
+			        extensions: 'gif,jpg,jpeg,bmp,png',
+			        mimeTypes: 'image/*',
+			    },
+
+			    //缩略图
+			    thumb: {
+			    	height: 270,
+			    	allowMagnify: true,
+			    	crop: false
+			    },
+			    compress: {
+			    	width: 270,
+			    	height: 270,
+			    	allowMagnify: false,
+			    	crop: false,
+			    	preserveHeaders: true
+			    }
+			});
+
+
+			uploader.on('fileQueued', function(file) {
+				uploader.makeThumb(file, function(error, src){
+					$('#avatar-thumbnail').attr('src', src)
+
+					$('#avatar-thumbnail').cropper({
+						aspectRatio: 1 / 1,
+						crop: function(event) {
+						    console.log(event.detail.x);
+						    console.log(event.detail.y);
+						    console.log(event.detail.width);
+						    console.log(event.detail.height);
+						    console.log(event.detail.rotate);
+						    console.log(event.detail.scaleX);
+						    console.log(event.detail.scaleY);
+						},
+						viewMode: 3
+					});
+
+				});
+				
+			});
+
+
+		}
+	})	
+	
+	
+</script>

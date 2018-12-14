@@ -1,0 +1,136 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑用户信息</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" id="editForm">
+		  <div class="form-group">
+		    <label for="inputEmailEdit" class="col-sm-2 control-label">邮箱</label>
+		    <div class="col-sm-10">
+		      <input type="email" class="form-control" id="inputEmailEdit" value="fmuncle@163" readonly>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputNameEdit" class="col-sm-2 control-label">手机号码</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputNameEdit" value="" readonly>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputNameEdit" class="col-sm-2 control-label">昵称</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputNameEdit" value="fuming">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputRealNameEdit" class="col-sm-2 control-label">真实姓名</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputRealNameEdit" value="付铭">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputIdEdit" class="col-sm-2 control-label">身份证号</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputIdEdit" value="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="col-sm-2 control-label">地区</label>
+		    <div class="col-sm-10 address-select">
+		      <select name="prov" class="">
+		      	<option value="1">山东</option>
+		      	<option value="2">北京</option>
+		      	<option value="3">上海</option>
+		      </select>
+		      <select name="city" class="">
+		      	<option value="11">济南</option>
+		      	<option value="12">青岛</option>
+		      	<option value="13">淄博</option>
+		      	<option value="14">枣庄</option>
+		      	<option value="15">东营</option>
+		      	<option value="16">烟台</option>
+		      	<option value="16">潍坊</option>
+		      	<option value="17">济宁</option>
+		      	<option value="18">泰安</option>
+		      	<option value="19">威海</option>
+		      	<option value="20">日照</option>
+		      	<option value="21">滨州</option>
+		      	<option value="22">德州</option>
+		      	<option value="23">聊城</option>
+		      	<option value="24">临沂</option>
+		      	<option value="25">菏泽</option>
+		      	<option value="26">莱芜</option>
+		      </select>
+		      <select name="country" class="">
+		      	<option value="1">历下区</option>
+		      	<option value="2">历城区</option>
+		      	<option value="3">仲宫区</option>
+		      	<option value="4">济阳县</option>
+		      	<option value="5">章丘市</option>
+		      </select>
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="inputAddressEdit" class="col-sm-2 control-label">详细地址</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputAddressEdit" value="高泾路588号北楼408">
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="inputSchoolEdit" class="col-sm-2 control-label">毕业院校</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputSchoolEdit" value="上海交通大学">
+		    </div>
+		  </div>
+		  
+		  <div class="form-group">
+		    <label for="inputMajorEdit" class="col-sm-2 control-label">所学专业</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputMajorEdit" value="计算机科学与技术">
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="inputEducationEdit" class="col-sm-2 control-label">学历</label>
+		    <div class="col-sm-10">
+		      <select name="education" id="inputEducationEdit" class="form-control">
+		      	<option value="0"></option>
+		      	<option value="1">文盲</option>
+		      	<option value="2">小学</option>
+		      	<option value="3">初中</option>
+		      	<option value="4">高中</option>
+		      	<option value="5">中专</option>
+		      	<option value="6">大专</option>
+		      	<option value="7">本科</option>
+		      	<option value="8">硕士研究生</option>
+		      	<option value="9">博士研究生</option>
+		      </select>
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="inputDeDegreeEdit" class="col-sm-2 control-label">学位</label>
+		    <div class="col-sm-10">
+		      <select name="education" id="inputDegreeEdit" class="form-control">
+		      	<option value="0"></option>
+		      	<option value="1">无</option>
+		      	<option value="2">学士</option>
+		      	<option value="3">硕士</option>
+		      	<option value="4">博士</option>
+		      	
+		      </select>
+		    </div>
+		  </div>
+
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary" form="addForm">提交</button>
+      </div>
+    </div>
+</div>
